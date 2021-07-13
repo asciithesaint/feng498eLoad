@@ -1,0 +1,12 @@
+C:\Users\assas\source\repos\FENG497\bin\Release\FENG497.exe.config
+C:\Users\assas\source\repos\FENG497\bin\Release\FENG497.exe
+C:\Users\assas\source\repos\FENG497\bin\Release\FENG497.pdb
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.Form1.resources
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.Properties.Resources.resources
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.csproj.GenerateResource.cache
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.csproj.CoreCompileInputs.cache
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.csproj.CopyComplete
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.exe
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.pdb
+C:\Users\assas\source\repos\FENG497\obj\Release\FENG497.csprojAssemblyReference.cache
+C:\Users\assas\source\repos\FENG497\bin\Release\AGauge.dll
