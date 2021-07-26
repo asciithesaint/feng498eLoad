@@ -30,8 +30,6 @@ namespace FENG497
             textBox1.Text = "0,00";
             constantCurrentString = textBox1.Text;
 
-
-
             time = 0f;
 
             foreach (string port in ports)
@@ -85,51 +83,12 @@ namespace FENG497
                 double ampere = float.Parse(values[0]);
                 double voltage = float.Parse(values[1]);
                 ampere = ampere * 20f / 1023f;
-                if (ampere > 1.36)
-                {
-                    double eqInC = (ampere * ampere * 0.434733819) - (3.930096977 * ampere)
-                        + 12.91697891;
-                    ampere = ampere * (eqInC + 100.0) / 100.0;
-                }
-                else if (ampere > 0.01 && ampere < 0.02)
-                {
-                    ampere = ampere * 5;
-                }
-                else if (ampere > 0.02 && ampere < 0.07)
-                {
-                    ampere = ampere * 3;
-                }
-                else if (ampere > 0.07 && ampere < 0.17)
-                {
-                    ampere = ampere * 1.7;
-                }
-                else if (ampere > 0.17 && ampere < 0.216)
-                {
-                    ampere = ampere * 1.43;
-                }
-                else if (ampere > 0.216 && ampere < 0.32)
-                {
-                    ampere = ampere * 1.35;
-                }
-                else if (ampere > 0.32 && ampere < 0.87)
-                {
-                    ampere = ampere * 1.19784005;
-                }
-                else if (ampere > 0.87 && ampere < 1.037)
-                {
-                    ampere = ampere * 1.0920181452;
-                }
-                else if (ampere > 1.037 && ampere < 1.36)
-                {
-                    ampere = ampere * 1.0743934586;
-                }
-
                 aGauge1.Value = Convert.ToInt32(ampere);
 
-                voltage = voltage * 50f / 1023f * 1.031;
+                voltage = voltage * 50f / 1023f;
 
                 double power = voltage * ampere;
-                //write to form app
+                //write to form labels(indicator)
                 label14.Text = ampere.ToString();
                 label2.Text = voltage.ToString();
                 label1.Text = power.ToString();
@@ -159,6 +118,8 @@ namespace FENG497
                     powered = power;
                 }
 
+                //transparent plot to carry graph scale(y-interval) up in order to 
+                //if any input is in the end of the scale and it could be hard to read from graph
                 double maximus = Math.Max(ampered, voltaged);
                 maximus = Math.Max(maximus, powered);
                 chart1.Series["Series4"].Points.AddXY(time, maximus + 0.1f);
@@ -208,7 +169,7 @@ namespace FENG497
             try
             {
                 float ampereFloat = Convert.ToSingle(constantCurrentString);
-                ampereFloat = ampereFloat / 20f * 4096f / 103.61f * 100f;
+                ampereFloat = ampereFloat / 20f * 4096f;
                 int intToSendDAC = Convert.ToUInt16(ampereFloat);
                 string strToSendDAC = Convert.ToString(intToSendDAC);
                 serialPort1.WriteLine(strToSendDAC);
@@ -259,7 +220,7 @@ namespace FENG497
         }
 
         private void button10_Click(object sender, EventArgs e)
-        {//serial port connect button
+        {//serial port connection button
             if (serialPort1.IsOpen == false)
             {
                 if (comboBox4.Text == "")

@@ -1,0 +1,2 @@
+Project report can be read to understand design.
+Main part to understand this project is methodology.
