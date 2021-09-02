@@ -6,4 +6,4 @@ feedback of comparator opamp. But, gui works fine it can be used with different 
 Main part to understand this project is methodology in project report.
 
 ## GUI
-![(Project%20Pics/5.png)
+![](Project%20Pics/5.png)
