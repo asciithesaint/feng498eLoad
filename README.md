@@ -5,4 +5,4 @@ Lastly, forgotten to add, empty opamp inputs in LT1014 should be short to ground
 feedback of comparator opamp. But, gui works fine it can be used with different designs.
 Main part to understand this project is methodology in project report.
 
-# GUI #
+# GUI #####
