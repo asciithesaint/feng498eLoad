@@ -13,6 +13,7 @@ feedback of comparator opamp. But, gui works fine it can be used with different 
 
 ## Built Load
 ![](Project%20Pics/1.jpg)
+![](Project Pics/1.jpg)
 
 ![](Project%20Pics/2.jpg)
 
